@@ -1,0 +1,15 @@
+.login {
+  width: 360px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+}
+.blue {
+  background-color: #7e98df;
+  color: white;
+}
+.white {
+  background-color: white;
+  color: #7e98df;
+  border: 1px solid#7e98df;
+}

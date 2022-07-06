@@ -1,0 +1,40 @@
+.page {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+}
+.login {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  width: 500px;
+  max-height: 710px;
+  border-radius: 30px;
+  padding-top: 20px;
+}
+
+.hai {
+  text-align: start;
+  width: 100%;
+  padding-left: 70px;
+}
+.forgot {
+  text-align: end;
+  width: 100%;
+}
+
+.textlogin {
+  display: flex;
+}
+.title h1 {
+  color: #7e98df;
+}
+.butonlogin {
+  margin-top: 30px;
+}

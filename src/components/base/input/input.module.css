@@ -1,0 +1,11 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+.inputLogin {
+  width: 360px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}

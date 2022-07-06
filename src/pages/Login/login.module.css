@@ -1,0 +1,49 @@
+.page {
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+}
+.login {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  width: 500px;
+  max-height: 710px;
+  border-radius: 30px;
+  padding-top: 20px;
+}
+
+.hai {
+  text-align: start;
+  width: 100%;
+  padding-left: 70px;
+}
+.forgot {
+  text-align: end;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.forgot a {
+  color: #7e98df;
+  text-decoration: none;
+  padding-right: 70px;
+}
+.signup a {
+  color: #7e98df;
+  text-decoration: none;
+}
+.textlogin {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.title h1 {
+  color: #7e98df;
+}
