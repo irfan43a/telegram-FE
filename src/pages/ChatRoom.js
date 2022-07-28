@@ -5,7 +5,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 
 const ChatRoom = () => {
   const [socket, setSocket] = useState(null);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [username, setUsername] = useState("");
   const [group, setGroup] = useState("");
   const [message, setMessage] = useState("");
@@ -17,7 +17,7 @@ const ChatRoom = () => {
     resultSocket.emit("initialRoom", { room: searchParams.get("group"), username: searchParams.get("username") });
     setUsername(searchParams.get("username"));
     setGroup(searchParams.get("group"));
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     if (socket) {

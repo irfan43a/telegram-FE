@@ -6,7 +6,7 @@ export const Profile = () => {
       <div className={styles.contact}>
         <div>
           <div>
-            <img src="" alt="image" />
+            <img src="" alt="" />
           </div>
           <div>
             <h6>Gloria Mckey</h6>
@@ -23,11 +23,10 @@ export const Profile = () => {
           <h6>@username</h6>
         </div>
         <div>
-          <h6>I’m Senior Frontend Developer from Microsoft</h6>
+          <h6>Im Senior Frontend Developer from Microsoft</h6>
           <p>Bio</p>
         </div>
         <div>
-          <h6></h6>
           <div>
             <p>notif</p>
             <p>Provaty</p>
