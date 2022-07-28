@@ -12,10 +12,77 @@ code {
   height: 500px;
 }
 .scroll-botom {
+  padding-top: 10px;
   height: 500px;
   overflow: auto;
 }
 .bg-green {
   background-color: lightgreen;
-  text-align: end;
+  width: fit-content;
+  border-radius: 35px 35px 10px 35px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 10px 30px;
+}
+.bg-violet {
+  background-color: #7e98df;
+  width: fit-content;
+  border-radius: 35px 35px 35px 10px;
+  padding: 10px 30px;
+  margin: 10px;
+}
+.pointer {
+  cursor: pointer;
+}
+.bg-friend {
+  background-color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 20px;
+}
+.imgProfileFriend {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.imgProfileFriend img {
+  width: 100%;
+}
+.input {
+  margin-top: 70px;
+}
+.contact-list {
+  padding-top: 10px;
+  margin-left: -50px;
+}
+.chat-list {
+  margin-top: -190px;
+}
+.button-contact {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+.button-contact button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 20px;
+  background-color: #7e98df;
+  color: #ffffff;
+  font-size: larger;
+}
+.title-telegram {
+  color: #7e98df;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.friendlist {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
 }

@@ -9,3 +9,10 @@
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
+.mesage {
+  border: none;
+  padding: 20px;
+  width: 250px;
+  height: 60px;
+  border-radius: 15px;
+}

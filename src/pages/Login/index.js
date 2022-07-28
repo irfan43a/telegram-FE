@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import styles from "./login.module.css";
 import Input from "../../components/base/input";
 import Button from "../../components/base/button";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../configs/redux/actions/userAction";
+import { Link, useNavigate } from "react-router-dom";
+// import { useDispatch, useSelector } from "react-redux";
+// import { loginUser } from "../../configs/redux/actions/userAction";
+import io from "socket.io-client";
+import axios from "axios";
 
-const Login = () => {
-  const dispatch = useDispatch();
-  const { isloading } = useSelector((state) => state.user);
+const Login = ({ setSocket }) => {
+  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const { isloading } = useSelector((state) => state.user);
   const [dataUser, setDataUser] = useState({
     email: "",
     password: "",
   });
+
   const handleChange = (e) => {
     setDataUser({
       ...dataUser,
@@ -21,7 +25,24 @@ const Login = () => {
   };
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(loginUser(dataUser));
+    // dispatch(loginUser(dataUser, navigate));
+    axios
+      .post(`${process.env.REACT_APP_TELE_BACKEND}users/login`, dataUser)
+      .then((res) => {
+        const respData = res.data.data;
+        localStorage.setItem("token", respData.token);
+        localStorage.setItem("refreshToken", respData.refreshToken);
+        const resultSocket = io("http://localhost:4000", {
+          query: { token: respData.token },
+        });
+        setSocket(resultSocket);
+        alert("Login success");
+        navigate("/private");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.response.data.message);
+      });
   };
   return (
     <div className={styles.page}>
@@ -43,7 +64,12 @@ const Login = () => {
             <Link to="#">Forgot password?</Link>
           </div>
           <div>
-            <Button title={isloading ? "Loading..." : "Login"} btn="login" color="blue" />
+            <Button
+              // title={isloading ? "Loading..." : "Login"}
+              title="Login"
+              btn="login"
+              color="blue"
+            />
           </div>
           <div className={styles.textlogin}>Login</div>
           <div>

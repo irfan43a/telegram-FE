@@ -1,0 +1,27 @@
+.pagechat {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: aqua;
+}
+.contact {
+  padding-top: 30px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (min-width: 360px) {
+  .contact {
+    width: 30%;
+  }
+}
+.message {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
