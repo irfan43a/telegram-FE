@@ -49,7 +49,6 @@ const Login = ({ setSocket }) => {
       <div className={styles.login}>
         <div className={styles.title}>
           <h1>Login</h1>
-          <p>{process.env.REACT_APP_TELE_BACKEND}haha</p>
         </div>
         <div className={styles.hai}>
           <p>Hi, Welcome back!</p>

@@ -12,7 +12,7 @@ const ChatRoom = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    const resultSocket = io("http://localhost:4000");
+    const resultSocket = io(process.env.REACT_APP_TELE_BACKEND);
     setSocket(resultSocket);
     resultSocket.emit("initialRoom", { room: searchParams.get("group"), username: searchParams.get("username") });
     setUsername(searchParams.get("username"));
