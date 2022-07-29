@@ -27,12 +27,12 @@ const Login = ({ setSocket }) => {
     e.preventDefault();
     // dispatch(loginUser(dataUser, navigate));
     axios
-      .post(`${process.env.REACT_APP_TELE_BACKEND}users/login`, dataUser)
+      .post(`${process.env.REACT_APP_TELE_BACKEND}/v1/users/login`, dataUser)
       .then((res) => {
         const respData = res.data.data;
         localStorage.setItem("token", respData.token);
         localStorage.setItem("refreshToken", respData.refreshToken);
-        const resultSocket = io("http://localhost:4000", {
+        const resultSocket = io(process.env.REACT_APP_TELE_BACKEND, {
           query: { token: respData.token },
         });
         setSocket(resultSocket);
@@ -49,6 +49,7 @@ const Login = ({ setSocket }) => {
       <div className={styles.login}>
         <div className={styles.title}>
           <h1>Login</h1>
+          <p>{process.env.REACT_APP_TELE_BACKEND}</p>
         </div>
         <div className={styles.hai}>
           <p>Hi, Welcome back!</p>

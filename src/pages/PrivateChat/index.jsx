@@ -4,6 +4,7 @@ import profileimg from "../../img/profileimg3.png";
 import profileimg2 from "../../img/profileimg2.png";
 import ScrollToBottom from "react-scroll-to-bottom";
 import Input from "../../components/base/input";
+import moment from "moment";
 
 const Private = ({ socket }) => {
   const [messages, setMessages] = useState([]);
@@ -14,7 +15,7 @@ const Private = ({ socket }) => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:4000/v1/users/", {
+      .get(`${process.env.REACT_APP_TELE_BACKEND}/v1/users/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,7 +38,7 @@ const Private = ({ socket }) => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get(`http://localhost:4000/v1/messages/${friend.id}`, {
+      .get(`${process.env.REACT_APP_TELE_BACKEND}/v1/messages/${friend.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,8 +89,8 @@ const Private = ({ socket }) => {
               {friends.map((item) => (
                 <li className={`list-group-item pointer friendlist`} onClick={() => chooseFriend(item)}>
                   <div className="imgProfileFriend">
-                    <img src={friend.img ? friend.img : profileimg2} alt="" />
-                  </div>{" "}
+                    <img key={item.id} src={friend.img ? friend.img : profileimg2} alt="" />
+                  </div>
                   {item.name}
                 </li>
               ))}
@@ -107,9 +108,9 @@ const Private = ({ socket }) => {
             <ul className="list-group">
               <ScrollToBottom className="scroll-botom">
                 {messages.map((item) => (
-                  <li className={`list-group-item ${item.receiver_id !== friend.id ? "bg-violet" : "bg-green"}`}>
+                  <li className={`list-group-item ${item.receiver_id !== friend.id ? "bg-violet" : "bg-green"}`} key={item.id}>
                     <p>
-                      {item.created_at} - {item.message}
+                      {moment(item.created_at).format("LT")} - {item.message}
                     </p>
                   </li>
                 ))}

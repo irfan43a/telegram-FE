@@ -25,7 +25,7 @@ const Login = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_TELE_BACKEND}users/register`, formRegister)
+      .post(`${process.env.REACT_APP_TELE_BACKEND}/v1/users/register`, formRegister)
       .then(() => {
         alert("Register berhasil");
         navigate("/");
