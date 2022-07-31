@@ -13,3 +13,22 @@
   color: #7e98df;
   border: 1px solid#7e98df;
 }
+.menu {
+  width: 150px;
+  background-color: #7e98df;
+  color: white;
+  border: 0;
+  text-align: start;
+}
+.editProf {
+  border: none;
+  color: #7e98df;
+  background-color: white;
+}
+/* .menu {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  z-index: -100;
+  /* border: 0;
+  background-image: ; */

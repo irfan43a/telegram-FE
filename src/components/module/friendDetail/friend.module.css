@@ -1,0 +1,56 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 350px;
+  background-color: white;
+  margin-left: -350px;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+.imgProfile {
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid black; */
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.imgProfile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
+}
+.identity {
+  padding: 0 10px;
+  display: flex;
+  width: 100%;
+  /* background-color: aqua; */
+  gap: 270px;
+}
+.phone {
+  width: 100%;
+  padding: 0 10px;
+}
+.menu {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 0 10px;
+}
+.prev {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.backemail {
+  gap: 50px;
+  display: flex;
+}

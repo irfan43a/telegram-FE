@@ -7,15 +7,45 @@ import { Link, useNavigate } from "react-router-dom";
 // import { loginUser } from "../../configs/redux/actions/userAction";
 import io from "socket.io-client";
 import axios from "axios";
+import swal from "sweetalert";
+import * as yup from "yup";
+import { useFormik } from "formik";
 
 const Login = ({ setSocket }) => {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const { isloading } = useSelector((state) => state.user);
   const [dataUser, setDataUser] = useState({
     email: "",
     password: "",
   });
+
+  // const formik = useFormik({
+  //   initialValues: {
+  //     email: "",
+  //     password: "",
+  //   },
+  //   validationSchema: yup.object({
+  //     email: yup.string().email("Invalid email format").required("Required"),
+  //     password: yup.string().min(3, "Minimum 3 character").required("Required"),
+  //   }),
+  //   onSubmit: (values) => {
+  //     try {
+  //       dispatch(loginUser(values, navigate));
+  //       // swal("Login Succes!", "success anda berhasil login", "success");
+  //       // navigate("/");
+  //     } catch (error) {
+  //       swal.fire({
+  //         title: "Error!",
+  //         text: error,
+  //         icon: "error",
+  //         confirmButtonText: "Ok",
+  //         confirmButtonColor: "#6a4029",
+  //       });
+  //     }
+  //   },
+  // });
+
+  // const dispatch = useDispatch();
+  // const { isloading } = useSelector((state) => state.user);
 
   const handleChange = (e) => {
     setDataUser({
@@ -36,12 +66,20 @@ const Login = ({ setSocket }) => {
           query: { token: respData.token },
         });
         setSocket(resultSocket);
-        alert("Login success");
+        swal({
+          title: "Good job!",
+          text: `${res.data.message}`,
+          icon: "success",
+        });
         navigate("/private");
       })
       .catch((err) => {
         console.log(err);
-        alert(err.response.data.message);
+        swal({
+          title: "Oops!",
+          text: `${err.response.data.message}`,
+          icon: "error",
+        });
       });
   };
   return (

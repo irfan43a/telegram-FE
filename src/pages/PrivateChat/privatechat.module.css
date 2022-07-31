@@ -1,0 +1,30 @@
+.private {
+  display: flex;
+  width: 100vw;
+  /* background-color: aqua; */
+  padding: 20px 40px;
+  gap: 50px;
+}
+.search {
+  display: flex;
+  /* background-color: aqua; */
+  align-items: center;
+  gap: 30px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.contactList {
+  /* background-color: aquamarine; */
+}
+.menu {
+  width: 30%;
+}
+.message {
+  width: 70%;
+}
+.detail {
+  display: none;
+}

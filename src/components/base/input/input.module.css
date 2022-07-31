@@ -12,7 +12,15 @@
 .mesage {
   border: none;
   padding: 20px;
-  width: 250px;
-  height: 60px;
-  border-radius: 15px;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+}
+.inputProf {
+  border: none;
+  text-align: center;
+}
+.inputData {
+  border: none;
+  width: 300px;
 }

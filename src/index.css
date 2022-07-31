@@ -10,9 +10,10 @@ code {
 }
 .wrapper-chat {
   height: 500px;
+  /* background-color: aqua; */
 }
 .scroll-botom {
-  padding-top: 10px;
+  padding-top: 0px;
   height: 500px;
   overflow: auto;
 }
@@ -24,25 +25,30 @@ code {
   margin-left: auto;
   margin-bottom: 10px;
   padding: 10px 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .bg-violet {
   background-color: #7e98df;
+  color: white;
   width: fit-content;
   border-radius: 35px 35px 35px 10px;
   padding: 10px 30px;
   margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .pointer {
   cursor: pointer;
 }
 .bg-friend {
-  background-color: #ffffff;
+  /* background-color: #ff0000; */
   display: flex;
   align-items: baseline;
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
   gap: 20px;
+  justify-content: space-between;
+  height: 70px;
 }
 .imgProfileFriend {
   width: 64px;
@@ -54,12 +60,16 @@ code {
   width: 100%;
 }
 .input {
-  margin-top: 70px;
+  margin-top: 5px;
 }
 .contact-list {
   padding-top: 10px;
   margin-left: -50px;
 }
+.btnmenu {
+  border: 0;
+}
+
 .chat-list {
   margin-top: -190px;
 }
@@ -80,9 +90,28 @@ code {
   color: #7e98df;
   font-weight: 700;
   margin-bottom: 10px;
+  display: flex;
+  gap: 230px;
+  width: 300px;
+  /* background-color: aqua; */
 }
 .friendlist {
   display: flex;
   align-items: baseline;
   gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile: */
+  .container {
+    padding-left: 50px;
+    width: 100%;
+    /* background-color: red; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .contact-list {
+    justify-content: center;
+  }
 }
