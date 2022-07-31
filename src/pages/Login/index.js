@@ -8,8 +8,8 @@ import { Link, useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import axios from "axios";
 import swal from "sweetalert";
-import * as yup from "yup";
-import { useFormik } from "formik";
+// import * as yup from "yup";
+// import { useFormik } from "formik";
 
 const Login = ({ setSocket }) => {
   const navigate = useNavigate();
