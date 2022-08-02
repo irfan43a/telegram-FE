@@ -79,7 +79,7 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
       </div>
       <label>
         <div className={styles.imgProfile}>
-          <input type="file" name="editimgprofile" value={dataProfile.editimgprofile} onChange={(e) => handleUploadChange(e)} />
+          <Input type="file" name="editimgprofile" value={dataProfile.editimgprofile} onChange={(e) => handleUploadChange(e)} />
           <img src={img} alt="gambar" />
         </div>
       </label>
