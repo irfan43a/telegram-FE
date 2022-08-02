@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./friend.module.css";
-// import back from "../../../img/back.svg";
-// import chat from "../../../img/Chat.svg";
 import { imgprev1, imgprev2, chat, back, imgprev3, imgprev4, imgprev5, imgprev6, imgprev7 } from "../../../img";
 const FriendDetail = ({ onClick, img, name, phone, email }) => {
   return (

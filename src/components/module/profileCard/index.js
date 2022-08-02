@@ -4,6 +4,7 @@ import styles from "./friend.module.css";
 import { chat, back, lock, data, device } from "../../../img";
 import Button from "../../base/button";
 import Input from "../../base/input";
+import swal from "sweetalert";
 const Profile = ({ onClick, img, name, phone, email, bio }) => {
   const [dataProfile, setDataProfile] = useState({
     name: "",
@@ -11,7 +12,7 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
     bio: "",
     phone: "",
     status: "",
-    img: "",
+    editimgprofile: "",
   });
   const [file, setFile] = useState({
     file: null,
@@ -19,7 +20,7 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
   });
 
   const handleUploadChange = (e) => {
-    console.log(e.target.files[0]);
+    console.log("dari target file", e.target.files[0]);
     let upload = e.target.files[0];
     setFile(upload);
   };
@@ -34,30 +35,40 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
 
   const handleUpload = (e) => {
     e.preventDefault();
-
+    const token = localStorage.getItem("token");
     let bodyFormData = new FormData();
     bodyFormData.append("name", dataProfile.name);
     bodyFormData.append("email", dataProfile.email);
     bodyFormData.append("bio", dataProfile.bio);
     bodyFormData.append("phone", dataProfile.phone);
     bodyFormData.append("status", dataProfile.status);
-    bodyFormData.append("img", file);
+    bodyFormData.append("editimgprofile", file);
 
     axios({
       method: "PUT",
-      url: `${process.env.REACT_APP_API_BACKEND}/v1/users/profile/`,
+      url: `${process.env.REACT_APP_TELE_BACKEND}/v1/users/profile/`,
       data: bodyFormData,
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: { Authorization: `Bearer ${token}` },
+      "Content-Type": "multipart/form-data",
     })
       .then((res) => {
-        alert("profile berhasil di rubah");
+        // alert("profile berhasil di rubah");
+        swal({
+          title: "Good job!",
+          text: `${res.data.message}`,
+          icon: "success",
+        });
         console.log(res);
       })
       .catch((e) => {
-        alert(e.response.data.message);
+        swal({
+          title: "Oops!",
+          text: `${e.response.data.message}`,
+          icon: "error",
+        });
       });
   };
-  console.log(handleUploadChange);
+  console.log("dari file", file);
   return (
     <div id="profile" className={styles.profile}>
       <div className={styles.backemail}>
@@ -66,25 +77,28 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
         </button>
         <span>{email}</span>
       </div>
-      <div className={styles.imgProfile}>
-        <img src={img} alt="gambar" />
-      </div>
+      <label>
+        <div className={styles.imgProfile}>
+          <input type="file" name="editimgprofile" value={dataProfile.editimgprofile} onChange={(e) => handleUploadChange(e)} />
+          <img src={img} alt="gambar" />
+        </div>
+      </label>
       <div className={styles.identity}>
-        <Input type="text" className="inputProf" placeholder="waduh" name="name" value={name} onChange={handleChange} />
+        <Input type="text" className="inputProf" placeholder={name} name="name" value={dataProfile.name} onChange={(e) => handleChange(e)} />
         <div>{bio}</div>
       </div>
       <div className={styles.phone}>
         <div>Account</div>
-        <Input type="text" className="inputData" placeholder={phone} name="phone" value={phone} onChange={handleChange} />
+        <Input type="text" className="inputData" placeholder={phone} name="phone" value={dataProfile.phone} onChange={(e) => handleChange(e)} />
       </div>
       <div className={styles.email}>
         <div>Email</div>
-        <Input type="email" className="inputData" placeholder={email} name={email} value="email" onChange={handleChange} />
+        <Input type="email" className="inputData" placeholder={email} name="email" value={dataProfile.email} onChange={(e) => handleChange(e)} />
       </div>
       <div className={styles.bio}>
         <span>Bio</span>
-        <Input type="text" className="inputData" placeholder={bio} name="bio" value={bio} onChange={handleChange} />
-        <Button title="tap to change profile" btn="editProf" onClick={handleUpload}></Button>
+        <Input type="text" className="inputData" placeholder={bio} name="bio" value={dataProfile.bio} onChange={(e) => handleChange(e)} />
+        <Button title="tap to change profile" btn="editProf" onClick={(e) => handleUpload(e)}></Button>
       </div>
       <div className={styles.menu}>
         <h4>Settings</h4>
