@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="https://res.cloudinary.com/hirejob/image/upload/v1659408865/Telegram/pageimage/logo_telegram_ylpn25.jpg" />
+</div>
+<h3 align="center">Telekilos</h3>
+<p align="center">
+  <a href="https://telekilos-app.netlify.app/">View Demo</a>
+   <br />
+    <p align="center">
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/react?color=32C33B"></a>
+    <a href="https://redux.js.org/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/redux?color=32C33B"></a>
+    <a href="https://getbootstrap.com/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/bootstrap?color=32C33B"></a>
+    <a href="https://axios-http.com/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/axios?color=32C33B"></a>
+    <a href="https://momentjs.com/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/moment?color=32C33B"></a>
+    <a href="https://socket.io/"><img src="https://img.shields.io/github/package-json/dependency-version/HyperCarry-Team/TukuShop-app-frontend/socket.io-client?color=32C33B"></a>
+    <img src="https://img.shields.io/github/license/HyperCarry-Team/TukuShop-app-frontend?color=32C33B">
+    </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ABOUT THE PROJECT -->
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+Telekilos is a website that can connect users by exchanging messages in real time through a media browser. Telegram is developed using technologies including PostgreSQL, Express JS, React and Node JS, better known as PERN .
 
-### `npm start`
+### Technology Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [ReactJS](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Axios](https://github.com/axios/axios)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- GETTING STARTED -->
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+- Clone This Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`https://github.com/irfan43a/telegram-FE`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Install Module
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm install`
 
-### `npm run eject`
+- Setting .env
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+REACT_APP_API_BACKENDL=YOUR_API_URL
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Executing program
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Run this project with `npm run start`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- SCREENSHOT -->
 
-## Learn More
+## Screenshot
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Landing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408197/Telegram/pageimage/landing_fctw4u.jpg" />
 
-### Code Splitting
+### Login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408176/Telegram/pageimage/login_m1pd6r.jpg" />
 
-### Analyzing the Bundle Size
+### Register
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408186/Telegram/pageimage/register_kprcjd.jpg" />
 
-### Making a Progressive Web App
+### Menu
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408212/Telegram/pageimage/menu_b8trka.jpg" />
 
-### Advanced Configuration
+### Detail Profile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408250/Telegram/pageimage/Profile_mk2ijz.jpg" />
 
-### Deployment
+### Detail Friend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img src="https://res.cloudinary.com/hirejob/image/upload/v1659408312/Telegram/pageimage/friend_detail_fr7chx.jpg" />
 
-### `npm run build` fails to minify
+<!-- RELATED PROJECT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Related Project
+
+- [Telekilos API](https://github.com/irfan43a/telegram-BE)
+- [Telekilos Demo](https://telekilos-app.netlify.app/)
+
