@@ -42,7 +42,7 @@ const Profile = ({ onClick, img, name, phone, email, bio }) => {
     bodyFormData.append("bio", dataProfile.bio);
     bodyFormData.append("phone", dataProfile.phone);
     bodyFormData.append("status", dataProfile.status);
-    bodyFormData.append("editimgprofile", file);
+    bodyFormData.append("profileimage", file);
 
     axios({
       method: "PUT",
