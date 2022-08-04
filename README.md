@@ -88,7 +88,7 @@ REACT_APP_API_BACKENDL=YOUR_API_URL
 - [Telekilos Demo](https://telekilos-app.netlify.app/)
 - [Telekilos Front App](https://github.com/irfan43a/telegram-FE)
 - [Telekilos API](https://github.com/irfan43a/telegram-BE)
-- [Telekilos Web Service](https://telekilos-app.herokuapp.com
+- [Telekilos Web Service](https://telekilos-app.herokuapp.com)
 
 ## Contact
 
